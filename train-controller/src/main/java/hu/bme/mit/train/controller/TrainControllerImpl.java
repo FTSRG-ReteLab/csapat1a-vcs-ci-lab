@@ -39,7 +39,7 @@ public class TrainControllerImpl implements TrainController {
 
     @Override
     public int getJoystickSpeed() {
-        return getJoystickSpeed(); //I know;
+        return this.step; //I know;
     }
 
     @Override
