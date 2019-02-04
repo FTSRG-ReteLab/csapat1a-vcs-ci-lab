@@ -37,7 +37,12 @@ public class TrainControllerImpl implements TrainController {
 		return referenceSpeed;
 	}
 
-	@Override
+    @Override
+    public int getJoystickSpeed() {
+        return getJoystickSpeed(); //I know;
+    }
+
+    @Override
 	public void setSpeedLimit(int speedLimit) {
 		this.speedLimit = speedLimit;
 		enforceSpeedLimit();
