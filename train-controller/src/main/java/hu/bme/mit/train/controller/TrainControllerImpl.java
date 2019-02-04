@@ -23,6 +23,15 @@ public class TrainControllerImpl implements TrainController {
 		enforceSpeedLimit();
 	}
 
+	public void setReferenceSpeed(int referenceSpeed) {
+		if (referenceSpeed > speedLimit)
+			this.referenceSpeed = speedLimit;
+		else if (referenceSpeed < 0)
+			this.referenceSpeed = 0;
+		else
+			this.referenceSpeed = referenceSpeed;
+	}
+
 	@Override
 	public int getReferenceSpeed() {
 		return referenceSpeed;
