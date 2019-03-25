@@ -1,13 +1,6 @@
 package hu.bme.mit.train.system;
 
-import com.google.common.collect.ArrayTable;
 import com.google.common.collect.HashBasedTable;
-import com.google.common.collect.Table;
-import org.checkerframework.checker.nullness.qual.Nullable;
-
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
 
 public class Tachograph {
     public static final String CurrentTime = "current_time";
@@ -22,10 +15,10 @@ public class Tachograph {
         table = HashBasedTable.create();
     }
 
-    public void put(int currentTime, int joy_pos, int ref_speed) {
+    public void put(int currentTime, int joyPos, int refSpeed) {
         table.put(rowKey, CurrentTime, currentTime);
-        table.put(rowKey, JoystickPosition, joy_pos);
-        table.put(rowKey, ReferenceSpeed, ref_speed);
+        table.put(rowKey, JoystickPosition, joyPos);
+        table.put(rowKey, ReferenceSpeed, refSpeed);
         rowKey++;
     }
 
